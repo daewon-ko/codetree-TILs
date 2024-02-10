@@ -11,7 +11,10 @@ public class Main {
             System.out.println(n*n);
             System.out.println("tiny");
         }
+        else{
+            System.out.println(n*n);
+        }
 
-        System.out.println(n*n);
+        
     }
 }
