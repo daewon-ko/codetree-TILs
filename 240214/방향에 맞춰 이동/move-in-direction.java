@@ -28,14 +28,14 @@ public class Main {
                     y+=dy[1];
                 }else if(dir.equals("W")){
                     x+=dx[2];
-                    y+=dx[2];
+                    y+=dy[2];
                 }else if(dir.equals("N")){
                     x+=dx[3];
                     y+=dy[3];
                 }
             }
         }
-        
+
         System.out.print(x+" "+y);
         br.close();
     }
