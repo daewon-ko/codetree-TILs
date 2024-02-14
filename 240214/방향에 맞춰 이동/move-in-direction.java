@@ -35,6 +35,7 @@ public class Main {
                 }
             }
         }
+        
         System.out.print(x+" "+y);
         br.close();
     }
