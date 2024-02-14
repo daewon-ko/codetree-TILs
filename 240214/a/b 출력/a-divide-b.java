@@ -1,16 +1,19 @@
 import java.util.*;
+import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
 
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
 
-        double result = (double)a/b;
+        BigDecimal a = sc.nextBigDecimal();
+        BigDecimal b = sc.nextBigDecimal();
 
-        System.out.printf("%.20f", result);
+
+        BigDecimal result = a.divide(b, 20, BigDecimal.ROUND_HALF_UP);
+
+        System.out.println(result);
 
 
     }
