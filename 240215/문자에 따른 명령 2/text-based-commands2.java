@@ -17,7 +17,7 @@ public class Main {
         int cnt_F = 0;
 
         int dirNum = 3;
-        int x=0;
+        int x =0;
         int y =0;
 
 
@@ -33,6 +33,10 @@ public class Main {
             }
         }
 
+        // System.out.println("cnt_F:"+cnt_F);
+        // System.out.println("cnt_L:"+cnt_L);
+        // System.out.println("cnt_R:"+cnt_R);
+
         for(int i=0; i<cnt_L; i++){
             dirNum= (dirNum-1+4)%4;
         }
@@ -41,14 +45,25 @@ public class Main {
             dirNum = (dirNum+1)%4;
         }
 
+        // System.out.println("dirNum"+dirNum);
+        // System.out.println(dx[dirNum]);
+        // System.out.println(dy[dirNum]);
+
+    
+    
 
         for(int i=0; i<cnt_F; i++){
-          x=x+dx[dirNum];
-         y+=dy[dirNum];  
+          x+=dx[dirNum];
+          y+=dy[dirNum];  
         }
 
 
         System.out.print(x+" "+y);
+
+        
+
+
+
 
 
 
