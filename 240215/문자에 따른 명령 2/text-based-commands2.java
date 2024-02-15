@@ -38,11 +38,15 @@ public class Main {
         }
 
         for(int i=0; i<cnt_R; i++){
-            dirNum = dirNum%4;
+            dirNum = (dirNum+1)%4;
         }
 
-        x=x+dx[dirNum];
-        y+=dy[dirNum];
+
+        for(int i=0; i<cnt_F; i++){
+          x=x+dx[dirNum];
+         y+=dy[dirNum];  
+        }
+
 
         System.out.print(x+" "+y);
 
