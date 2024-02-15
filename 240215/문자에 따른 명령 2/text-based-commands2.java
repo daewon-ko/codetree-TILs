@@ -24,38 +24,18 @@ public class Main {
         for(int i=0; i<input.length(); i++){
             char c = input.charAt(i);
 
-            if(c=='L')
-                cnt_L++;
+            if(c=='L'){
+                dirNum= (dirNum-1+4)%4;
+            }
             else if(c=='R'){
-                cnt_R++;
+               dirNum = (dirNum+1)%4;
             }else if(c=='F'){
-                cnt_F++;
+                x+=dx[dirNum];
+                y+=dy[dirNum];  
             }
         }
 
-        // System.out.println("cnt_F:"+cnt_F);
-        // System.out.println("cnt_L:"+cnt_L);
-        // System.out.println("cnt_R:"+cnt_R);
 
-        for(int i=0; i<cnt_L; i++){
-            dirNum= (dirNum-1+4)%4;
-        }
-
-        for(int i=0; i<cnt_R; i++){
-            dirNum = (dirNum+1)%4;
-        }
-
-        // System.out.println("dirNum"+dirNum);
-        // System.out.println(dx[dirNum]);
-        // System.out.println(dy[dirNum]);
-
-    
-    
-
-        for(int i=0; i<cnt_F; i++){
-          x+=dx[dirNum];
-          y+=dy[dirNum];  
-        }
 
 
         System.out.print(x+" "+y);
