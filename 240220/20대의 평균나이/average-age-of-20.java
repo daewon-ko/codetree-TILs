@@ -8,7 +8,8 @@ public class Main {
         int n = 20;
         int cnt = 0;
         double sum = 0;
-        while(n>=20 && n<30){
+
+        while(true){
             n = sc.nextInt();
             if(n>=30){
                 break;
