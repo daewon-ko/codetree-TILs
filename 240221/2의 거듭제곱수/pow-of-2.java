@@ -8,10 +8,10 @@ public class Main {
         int n = sc.nextInt();
 
 
-        int x =2 ;
-        while(n/2>1){
-            x = n/2;
-            n = x;
+        int x=0;
+        while(n!=1){
+            n=n/2;
+            x++;
         }
 
         System.out.println(x);
