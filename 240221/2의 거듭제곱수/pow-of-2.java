@@ -7,8 +7,12 @@ public class Main {
 
         int n = sc.nextInt();
 
-        int result = 2;
-        int x = n/result;
+
+        int x =2 ;
+        while(n/2>1){
+            x = n/2;
+            n = x;
+        }
 
         System.out.println(x);
 
