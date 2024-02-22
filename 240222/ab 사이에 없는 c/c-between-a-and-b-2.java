@@ -8,11 +8,12 @@ public class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-        boolean satisfied = true;
+        boolean satisfied = false;
 
         for(int i=a; i<=b; i++){
-            if(i%c!=0){
-                satisfied = false;
+            if(i%c==0){
+                satisfied = true;
+                break;
             }
         }
 
