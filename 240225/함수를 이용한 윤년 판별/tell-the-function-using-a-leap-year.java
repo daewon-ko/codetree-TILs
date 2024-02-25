@@ -9,12 +9,12 @@ public class Main {
 
     }
     public static boolean isYoon(int n){
-        if(n%4!=0){
+        if(n%4!=0 && n%100==0 && n%400!=0){
             return false;   // 4로 나눠떨어지지않으면 평년
         }
-        if(n%100==0 && n%400!=0){
-            return false;    // 100으로 나눠떨어지고 400으로 나눠떨어지지않ㅎ으면 평년
-        }
+        // if(n%100==0 && n%400!=0){
+        //     return false;    // 100으로 나눠떨어지고 400으로 나눠떨어지지않ㅎ으면 평년
+        // }
         return true;
     }
 }
