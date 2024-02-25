@@ -8,15 +8,20 @@ public class Main {
         int cnt = 0;
 
         for(int i=a; i<=b; i++){
-            String num = String.valueOf(i);
-            if(num.contains("3") || num.contains("6") || num.contains("9") || logic(i)){
+            if(isContain369(i) || i%3==0){
                 cnt++;
             }
         }
-        System.out.println(cnt);
+    System.out.println(cnt);
     }
-    public static boolean logic(int n){
-        return n%3==0;
+    public static boolean isContain369(int n){
 
+        while(n>0){
+            if(n%10 ==3 || n%10 ==6 || n%10 ==9){
+                return true;
+            }
+            n/=10;
+        }
+        return false;
     }
 }
