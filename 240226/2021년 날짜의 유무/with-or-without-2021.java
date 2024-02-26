@@ -16,12 +16,12 @@ public class Main {
             System.out.println("Yes");
             return;
         }
-        if(m%2==0 && isRightMonth(m) && m!=2 && (d>=1 && d<=31)){
+        if(m%2==0 && isRightMonth(m) && m!=2 && (d>=1 && d<=30)){
             System.out.println("Yes");
             return;
         }
 
-        if(m%2!=0 && isRightMonth(m) && d>=1 && d<=30){
+        if(m%2!=0 && isRightMonth(m) && d>=1 && d<=31 || m==8){
             System.out.println("Yes");
             return;
         }
