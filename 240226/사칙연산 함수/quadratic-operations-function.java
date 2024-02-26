@@ -19,8 +19,10 @@ public class Main {
             System.out.println(a+" - "+ c +" = "+(a-c));
         }else if(o.equals("/")){
             System.out.println(a+" / "+ c +" = "+(int)(a/c));
-        }else{
+        }else if(o.equals("*"){
             System.out.println(a+" * "+ c +" = "+(a*c));
+        }else{
+            System.out.println("False");
         }
     }
 }
