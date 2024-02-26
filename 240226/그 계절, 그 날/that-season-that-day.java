@@ -50,7 +50,7 @@ public class Main {
             return true;
         }
 
-        if(m%2==1 && d>=1 && d<=31 || m==8){
+        if(m%2==1 && d>=1 && d<=31 || (m==8 && d>=1 && d<=31)){
             return true;
         }
 
