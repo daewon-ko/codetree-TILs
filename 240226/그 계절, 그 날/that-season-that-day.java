@@ -110,14 +110,17 @@ public class Main {
 
     public static boolean isRightYear(int y, int m, int d) {
         if (isYoon(y)) {
-            if (m == 2 && d >= 1 && d <= 29) {
-                return true;
+            if (m == 2) {
+                if (d >= 1 && d <= 29) {
+                    return true;
+                }
             } else {
                 return isRightMonthDay(m, d);
             }
         } else {
             return isRightMonthDay(m, d);
         }
+        return false;
     }
 
     public static boolean isRightMonthDay(int m, int d) {
