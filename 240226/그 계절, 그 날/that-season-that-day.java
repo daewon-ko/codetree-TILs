@@ -25,11 +25,11 @@ public class Main {
 
     }
 
-    public static boolean isRightYear(int y, int m, int d){
+    public static boolean isRightYear(int y, int m, int d){ 
 
-        if(isYoon(y) && isRightMonth(m)&& d>=1 && d<=29){
+        if(isYoon(y) && isRightMonth(m)&& d>=1 && d<=29){   //윤년일때
             return true;
-        }else if(isRightMonth(m) && isRightDay(m,d)){
+        }else if(!isYoon(y) && isRightMonth(m) && isRightDay(m,d)){   // 윤년이 아닐때
             return true;
         }
         return false;
