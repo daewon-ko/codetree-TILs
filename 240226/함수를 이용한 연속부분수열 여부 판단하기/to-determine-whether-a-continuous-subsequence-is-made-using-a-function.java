@@ -29,19 +29,17 @@ public class Main {
         
     }
     public static void isInclude(List<Integer> a1, List<Integer> a2){
-        int cnt = 0;
-        int standard = a2.size();
+
 
         for(int i=0; i<a1.size(); i++){
             for(int j=0; j<a2.size(); j++){
                 if(a1.get(i).equals(a2.get(j))){
-                    cnt++;
-                    break;
+                    a2.remove(j);
                 }
             }
         }
 
-        if(cnt == standard){
+        if(a2.size() ==0){
             System.out.println("Yes");
             return;
         }
