@@ -59,18 +59,30 @@ public class Main {
     }
 
     public static boolean isYoon(int y){
-        if(y%4==0){
-            if(y%100==0){
-                if(y%400==0){
-                    return true;
-                }else{
-                    return false;
-                }
-            }else{
-                return true;
-            }
-        }else{
-            return false;
-        }
+    if(y % 400 == 0){
+        return true;  // 4의 배수이면서 100의 배수이면서 400의 배수일 때
+    } else if(y % 100 == 0){
+        return false;  // 4의 배수이면서 100의 배수이지만 400의 배수가 아닐 때
+    } else if(y % 4 == 0){
+        return true;  // 4의 배수이면서 100의 배수가 아닐 때
+    } else {
+        return false;  // 4의 배수가 아닐 때
     }
+}
+
+    // public static boolean isYoon(int y){
+    //     if(y%4==0){
+    //         if(y%100==0){
+    //             if(y%400==0){
+    //                 return true;
+    //             }else{
+    //                 return false;
+    //             }
+    //         }else{
+    //             return true;
+    //         }
+    //     }else{
+    //         return false;
+    //     }
+    // }
 }
