@@ -36,6 +36,7 @@ public class Main {
             for(int j=0; j<a2.size(); j++){
                 if(a1.get(i).equals(a2.get(j))){
                     cnt++;
+                    break;
                 }
             }
         }
