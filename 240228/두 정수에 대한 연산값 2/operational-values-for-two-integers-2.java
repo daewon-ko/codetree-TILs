@@ -1,25 +1,35 @@
 import java.util.*;
 public class Main {
+
+    static int a;
+    static int b;
+
+    static int min;
+    static int max;
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+        a = sc.nextInt();
+        b = sc.nextInt();
+
+        logic(a,b);
 
 
-        int min = Math.min(a,b);
-        int max = Math.max(a,b);
+
+        System.out.print(min+" "+max);
+
+    }
+
+
+    public static void logic(int a, int b){
+
+
+        min = Math.min(a,b);
+        max = Math.max(a,b);
 
         min+=10;
         max*=2;
-
-
-
-        System.out.print(min+" ");
-        System.out.print(max);
-
-
 
     }
     public static int getMin(int a, int b){
