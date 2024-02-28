@@ -1,52 +1,74 @@
+// import java.util.*;
+// public class Main {
+
+//     public static void main(String[] args) {
+//         // 여기에 코드를 작성해주세요.
+//         Scanner sc = new Scanner(System.in);
+
+//         int a = sc.nextInt();
+//         int b = sc.nextInt();
+
+
+//         int min = Math.min(a,b);
+//         int max = Math.max(a,b);
+
+//         min+=10;
+//         max*=2;
+
+
+
+//         System.out.print(min+" "+max);
+
+//     }
+//     public static int getMin(int a, int b){
+//         int min = 0;
+
+//         if(a<b){
+//             min = a;
+//         }else{
+//             min = b;
+//         }
+//         return min;
+//     }
+//     public static int getMax(int a, int b){
+//         int max = 0;
+//         if(a<b){
+//             max = b;
+//             return max;
+//         }
+//         return a;
+//     }
+// }
+
 import java.util.*;
+
 public class Main {
 
-    static int a;
-    static int b;
-
-    static int min;
-    static int max;
     public static void main(String[] args) {
-        // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
 
-        a = sc.nextInt();
-        b = sc.nextInt();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
 
-        logic(a,b);
+        // 함수 호출을 통해 값을 수정
+        int min = getMin(a, b) + 10;
+        int max = getMax(a, b) * 2;
 
-
-
-        System.out.print(min+" "+max);
-
+        // 함수 호출 이후에 값을 출력
+        System.out.print(min + " " + max);
     }
 
-
-    public static void logic(int a, int b){
-
-
-        min = Math.min(a,b);
-        max = Math.max(a,b);
-
-        min+=10;
-        max*=2;
-
-    }
-    public static int getMin(int a, int b){
-        int min = 0;
-
-        if(a<b){
-            min = a;
-        }else{
-            min = b;
+    public static int getMin(int a, int b) {
+        if (a < b) {
+            return a;
+        } else {
+            return b;
         }
-        return min;
     }
-    public static int getMax(int a, int b){
-        int max = 0;
-        if(a<b){
-            max = b;
-            return max;
+
+    public static int getMax(int a, int b) {
+        if (a < b) {
+            return b;
         }
         return a;
     }
