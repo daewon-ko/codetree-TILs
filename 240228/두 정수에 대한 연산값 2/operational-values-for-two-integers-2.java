@@ -8,8 +8,8 @@ public class Main {
         int b = sc.nextInt();
 
 
-        int min = getMin(a, b);
-        int max = getMax(a,b);
+        int min = Math.min(a,b);
+        int max = Math.max(a,b);
 
         System.out.print((min+10)+" ");
         System.out.print(max*2);
