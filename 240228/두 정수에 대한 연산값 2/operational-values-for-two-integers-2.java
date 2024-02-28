@@ -11,8 +11,13 @@ public class Main {
         int min = Math.min(a,b);
         int max = Math.max(a,b);
 
-        System.out.print((min+10)+" ");
-        System.out.print(max*2);
+        min+=10;
+        max*=2;
+
+
+
+        System.out.print(min+" ");
+        System.out.print(max);
 
 
 
