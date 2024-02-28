@@ -51,11 +51,11 @@ public class Main {
         int b = sc.nextInt();
 
         // 함수 호출을 통해 값을 수정
-        int min = getMin(a, b) + 10;
-        int max = getMax(a, b) * 2;
+         a = getMin(a, b) + 10;
+        b = getMax(a, b) * 2;
 
         // 함수 호출 이후에 값을 출력
-        System.out.print(min + " " + max);
+        System.out.print(a + " " + b);
     }
 
     public static int getMin(int a, int b) {
