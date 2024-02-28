@@ -15,14 +15,13 @@ public class Main {
     }
 
     public static String reverseWord(String input){
-        String word = "";
+        StringBuilder word = new StringBuilder();
         int size = input.length();
         for(int i=size-1; i>=0; i--){
             char c=input.charAt(i);
             String oneChar = String.valueOf(c);
-            word +=oneChar;
+            word.append(oneChar);
         }
-        return word;
-
+        return word.toString();
     }
 }
