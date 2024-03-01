@@ -16,7 +16,7 @@ public class Main {
 
         for(int i=1; i<=a.length; i++){
             for(int j=i+1; j<=a.length; j++){
-                for(int k=j+1; k<=a.length; k++){
+                for(int k=j+1; k<=a.length-1; k++){
                     if(i<j && j<k  && (a[i]<=a[j] && a[j] <=a[k]))
                         cnt++;  
                 }
