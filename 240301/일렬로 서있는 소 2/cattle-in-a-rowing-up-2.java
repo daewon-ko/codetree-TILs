@@ -14,10 +14,10 @@ public class Main {
 
         int cnt = 0; 
 
-        for(int i=1; i<=a.length; i++){
-            for(int j=i+1; j<=a.length; j++){
-                for(int k=j+1; k<=a.length-1; k++){
-                    if(i<j && j<k  && (a[i]<=a[j] && a[j] <=a[k]))
+        for(int i=1; i<=n; i++){
+            for(int j=i+1; j<=n; j++){
+                for(int k=j+1; k<=n; k++){
+                    if( (a[i]<=a[j] && a[j] <=a[k]))
                         cnt++;  
                 }
             }            
