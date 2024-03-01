@@ -16,10 +16,10 @@ public class Main {
         }
         int max = 0;
 
-        for(int i=0; i<n-2; i++){
+        for(int i=0; i<n; i++){
             int sum =0;
-            for(int j=0; j<n; j++){
-                max = Math.max(max,graph[i][j]+graph[i+1][j]+graph[i+1][j]);
+            for(int j=0; j<n-2; j++){
+                max = Math.max(max,graph[i][j]+graph[i][j+1]+graph[i][j+2]);
             }
         }
         System.out.println(max);
