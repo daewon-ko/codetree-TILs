@@ -12,25 +12,23 @@ public class Main {
 
         for(int i=0; i<n; i++){
 
-                List<Integer> coordinates = new ArrayList<>();
-    coordinates.add(Integer.valueOf(sc.nextInt()));
-    coordinates.add(Integer.valueOf(sc.nextInt()));
-    graph.add(coordinates);
-
-
+        List<Integer> coordinates = new ArrayList<>();
+        coordinates.add(Integer.valueOf(sc.nextInt()));
+        coordinates.add(Integer.valueOf(sc.nextInt()));
+            graph.add(coordinates);
         }
     
-        for(int i=1; i<n-1; i++){
+        for(int i=1; i<n; i++){
             int sum = 0; 
             List<Integer> placeBefore = graph.get(i-1);
-            List<Integer> placeAfter = graph.get(i+1);
+            // List<Integer> placeAfter = graph.get(i+1);
 
 
             int beforeX = placeBefore.get(0);
             int beforeY = placeBefore.get(1);
 
-            int afterX = placeAfter.get(0);
-            int afterY = placeAfter.get(1);
+            // int afterX = placeAfter.get(0);
+            // int afterY = placeAfter.get(1);
 
 
             for(int j=0; j<n; j++){
