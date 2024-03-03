@@ -19,22 +19,36 @@ public class Main {
 
 
         }
-        
-        List<Integer> start=graph.get(0);
-        List<Integer> end = graph.get(n-1);
-        int firstX = start.get(0);
-        int firstY = start.get(1);
-
-        int lastX = end.get(0);
-        int lastY = end.get(1);
-
+    
         for(int i=1; i<n-1; i++){
             int sum = 0; 
-            List<Integer> place =graph.get(i);
-            int x= place.get(0);
-            int y = place.get(1);
-            sum = Math.abs(x-firstX) +Math.abs(y-firstY)
-            +Math.abs(x-lastX) + Math.abs(y-lastY);
+            List<Integer> placeBefore = graph.get(i-1);
+            List<Integer> placeAfter = graph.get(i+1);
+
+
+            int beforeX = placeBefore.get(0);
+            int beforeY = placeBefore.get(1);
+
+            int afterX = placeAfter.get(0);
+            int afterY = placeAfter.get(1);
+
+
+            for(int j=0; j<n; j++){
+                List<Integer> place = graph.get(j);
+
+                if(j==i){
+                    continue;
+                }
+
+                int x = place.get(0);
+                int y = place.get(1);
+
+                sum+=Math.abs(beforeX - x)+Math.abs(beforeY-y);
+
+                beforeX = x;
+                beforeY = y;
+            }
+
 
             MIN = Math.min(MIN, sum);
 
