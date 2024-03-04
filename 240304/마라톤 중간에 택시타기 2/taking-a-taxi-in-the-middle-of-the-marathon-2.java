@@ -18,17 +18,14 @@ public class Main {
             graph.add(coordinates);
         }
 
-        for (int i = 1; i < n-1; i++) { // 1 ~ n-2까지 
+        for (int i = 1; i < n; i++) { // 1 ~ n-2까지 
             List<Integer> placeBefore = graph.get(i - 1);
-            List<Integer> placeAfter = graph.get(i + 1);
 
             int sum = 0;
 
             int beforeX = placeBefore.get(0);
             int beforeY = placeBefore.get(1);
 
-            int afterX = placeAfter.get(0);
-            int afterY = placeAfter.get(1);
 
             for (int j = 0; j < n; j++) {
                 if (j == i) {
