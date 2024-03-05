@@ -5,7 +5,7 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int [] arr = new int[1003];
+        int [] arr = new int[n+1];
         for(int i=1; i<=n; i++){
             arr[i] = sc.nextInt();
         }
@@ -14,6 +14,7 @@ public class Main {
 
         for(int i=1; i<=n; i++){    // i번쨰가 기준방
             int sum = 0;
+
             for(int j=(i+1); j<=n; j++){ // n-i번만큼 돌 수 있음
 
                 // if(i==j){
@@ -31,6 +32,8 @@ public class Main {
             }
             min = Math.min(min,sum);
         }
+
+
         System.out.println(min);
     }
 }
