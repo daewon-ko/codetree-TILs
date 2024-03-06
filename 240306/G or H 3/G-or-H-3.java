@@ -14,7 +14,7 @@ public class Main {
         n = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken())+1;
 
-        String [] graph = new String [10000+1];
+        String [] graph = new String [10000];
 
         // place = new int[n+1];
         // alphabet = new String[n+1];
@@ -33,7 +33,7 @@ public class Main {
 
         int max = Integer.MIN_VALUE;
 
-         for(int i=1; i<=r-k+1; i++){
+         for(int i=1; i<=10000-k; i++){
             StringBuilder sb = new StringBuilder();
             for(int j=i; j<i+k; j++){
                 sb.append(graph[j]);                
