@@ -14,48 +14,49 @@ public class Main {
         n = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken())+1;
 
-        String [] graph = new String [10000];
+        int [] graph = new int[10001];
 
-        // place = new int[n+1];
-        // alphabet = new String[n+1];
-
+  
 
 
-        r = 0; 
 
         for(int i=1; i<=n; i++){
             st = new StringTokenizer(br.readLine());
             int index = Integer.parseInt(st.nextToken());
             String alphabet = st.nextToken();
-            graph[index] = alphabet;
-            r=Math.max(r,index);
+
+            if(alphabet.equals("G")){
+                graph[index] = 1;
+            }else if(alphabet.equals("H")){
+                graph[index] = 2;
+            }
         }
 
         int max = Integer.MIN_VALUE;
 
-         for(int i=1; i<=10000-k; i++){
-            StringBuilder sb = new StringBuilder();
+         for(int i=1; i<=10000-k+1; i++){
+            int sum = 0;
             for(int j=i; j<i+k; j++){
-                sb.append(graph[j]);                
+               sum+=graph[j];         
             }
-            int score = convert(sb.toString());
-            max = Math.max(max, score);
+            // int score = convert(sb.toString());
+            max = Math.max(max, sum);
          }
          System.out.println(max);
 
 
     }
 
-    public static int convert(String word){
-        int number = 0; 
-        for(int i=0; i<word.length();  i++){
-            char c=word.charAt(i);
-            if(c =='G'){
-                number+=1;
-            }else if(c=='H'){
-                number+=2;
-            }
-        }
-        return number;
-    }
+    // public static int convert(String word){
+    //     int number = 0; 
+    //     for(int i=0; i<word.length();  i++){
+    //         char c=word.charAt(i);
+    //         if(c =='G'){
+    //             number+=1;
+    //         }else if(c=='H'){
+    //             number+=2;
+    //         }
+    //     }
+    //     return number;
+    // }
 }
