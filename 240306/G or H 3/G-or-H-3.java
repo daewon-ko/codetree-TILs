@@ -14,7 +14,7 @@ public class Main {
         n = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken())+1;
 
-        String [] graph = new String [10000];
+        String [] graph = new String [10000+1];
 
         // place = new int[n+1];
         // alphabet = new String[n+1];
@@ -45,6 +45,7 @@ public class Main {
 
 
     }
+
     public static int convert(String word){
         int number = 0; 
         for(int i=0; i<word.length();  i++){
