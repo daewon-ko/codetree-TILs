@@ -15,17 +15,22 @@ public class Main {
             int candy_count = sc.nextInt();
             int index = sc.nextInt();
             arr[index] = candy_count;
-            max_index = Math.max(max_index, index);
+            // max_index = Math.max(max_index, index);
         }
 
-        int [] arr2=Arrays.copyOf(arr, max_index);
-        int l = arr2.length-1;
+        // int [] arr2=Arrays.copyOf(arr, max_index);
+
+        // int l = arr2.length-1;
+
         int max= Integer.MIN_VALUE;
 
-        for(int i=k; i<=l-k; i++){
+        for(int i=0; i<100; i++){
             int sum = 0;
             for(int j=i-k; j<=i+k; j++){
-                sum+=arr2[j];
+                if(j>=0 && j<100){
+                    sum+=arr[j];
+                }
+                
                max =  Math.max(sum,max);
             }
         }
