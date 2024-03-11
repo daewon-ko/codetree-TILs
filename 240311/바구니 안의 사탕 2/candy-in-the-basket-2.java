@@ -16,7 +16,7 @@ public class Main {
         for(int i=0; i<n; i++){
             int candy_count = sc.nextInt();
             int index = sc.nextInt();
-            arr[index] = candy_count;
+            arr[index] += candy_count;
             // max_index = Math.max(max_index, index);
         }
 
