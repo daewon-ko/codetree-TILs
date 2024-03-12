@@ -16,15 +16,15 @@ public class Main {
         c = sc.nextInt();
 
         int cnt = 0;
-        for(int i =a+3; i<=n; i++){
-            for(int j= b+3; j<=n; j++){
-                for(int k =c+3; k<=n; k++){
-                    if(n-i<2 || n-j <2 || n-k<2){
+        for(int i =1; i<=n; i++){
+            for(int j=1; j<=n; j++){
+                for(int k =1; k<=n; k++){
+                   if(Math.abs(i-a)>=3 && Math.abs(j-b)>=3 && Math.abs(k-c)>=3){
                         cnt++;
-                    }
+                   }
                 }
             }
         }
-        System.out.println(n*n*n - cnt);
+        System.out.println((n*n*n)-cnt);
     }
 }
