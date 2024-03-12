@@ -23,6 +23,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(6*6*6 - cnt);
+        System.out.println(n*n*n - cnt);
     }
 }
