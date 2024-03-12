@@ -19,7 +19,9 @@ public class Main {
         for(int i =a+3; i<=n; i++){
             for(int j= b+3; j<=n; j++){
                 for(int k =c+3; k<=n; k++){
-                    cnt++;
+                    if(n-i<2 || n-j <2 || n-k<2){
+                        cnt++;
+                    }
                 }
             }
         }
