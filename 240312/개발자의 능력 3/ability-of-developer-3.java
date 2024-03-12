@@ -10,7 +10,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int min = Integer.MAX_VALUE;
+        int min = 0;
 
         for(int i=0; i<6; i++){
             for(int j=i+1; i<6; i++){
