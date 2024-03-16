@@ -8,7 +8,9 @@ public class Main {
         if(c == 'z'){
             System.out.println('a');
         }
-
-        System.out.println((char)(c+1));
+        else{
+            System.out.println((char)(c+1));
+        }
+        
     }
 }
