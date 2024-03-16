@@ -5,6 +5,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         char c = sc.next().charAt(0);
 
+        if(c == 'z'){
+            System.out.println('a');
+        }
+
         System.out.println((char)(c+1));
     }
 }
