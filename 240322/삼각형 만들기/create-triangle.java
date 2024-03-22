@@ -39,14 +39,14 @@ public class Main {
         
                     
                      ){
-                        double result = Math.abs((x1*y2 + x2*y3 + x3*y1) -(x2*y1 + x3*y2 + x1*y3))/2;
+                        double result = Math.abs((x1*y2 + x2*y3 + x3*y1) -(x2*y1 + x3*y2 + x1*y3));
                         max = Math.max(max, result);
                     }
                 }
             }
         }
 
-        System.out.println((int)(2*max));
+        System.out.println((int)(max));
 
     }
 }
