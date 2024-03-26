@@ -12,7 +12,7 @@ public class Main {
             }
             else if(c>='A'&& c<='Z'){
                 sb.append(String.valueOf((char)(c-'A'+'a')));
-            }else if(c>='1'&& c<='9'){
+            }else if(c>='0'&& c<='9'){
                 sb.append(String.valueOf(c));
             }
 
